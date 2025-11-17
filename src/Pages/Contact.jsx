@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "../Style/Contact.css";
 
@@ -14,7 +13,6 @@ function Contact() {
 
   return (
     <>
-    <Navbar />
       <div className="contactustext">
         <h1 className="maintext">
           <strong>Contact Us</strong>
@@ -171,7 +169,6 @@ function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <Footer />
     </>
   );
 }

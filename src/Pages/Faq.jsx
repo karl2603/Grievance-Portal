@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "../Style/Faq.css";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
 
 function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -55,7 +53,6 @@ function FAQ() {
 
   return (
     <>
-    <Navbar />
       <div className="FAQmaintext">
         <h1 className="faqtext">
           <i className="fi fi-rs-interrogation"></i>
@@ -87,7 +84,6 @@ function FAQ() {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 }
