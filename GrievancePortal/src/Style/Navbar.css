@@ -1,0 +1,89 @@
+/* Universal font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Navbar base */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* ensures it stays above other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Tamil heading */
+.headertext {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+/* Logo section */
+.navbar-logo img {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50px;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Underline hover animation */
+.nav-links a:not(.contact-btn)::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 0%;
+    height: 2px;
+    background-color: #2575fc;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:not(.contact-btn):hover::after {
+    width: 100%;
+}
+
+.nav-links a:not(.contact-btn):hover {
+    color: #2575fc;
+}
+
+/* Contact Us special button */
+.nav-links a.contact-btn {
+    background-color: #ff7300;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(255, 115, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a.contact-btn:hover {
+    transform: translateY(-2px);
+    background-color: #e86400;
+    box-shadow: 0 6px 16px rgba(255, 115, 0, 0.4);
+    opacity: 0.95;
+}

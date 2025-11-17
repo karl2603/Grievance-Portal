@@ -1,0 +1,242 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*contactustext*/
+.contactustext {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.maintext {
+    color: #e26b00;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-size: 38px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+}
+
+.subtext {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 60px;
+    line-height: 25.6px;
+}
+
+/*TWO divs*/
+.contactpage {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.twocontainer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 32px 25px 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 35%;
+}
+
+/* container style*/
+.ContainerHeadText {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/*getintouch container*/
+.icondiv {
+    height: 45px;
+    width: 35px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.emailicon,
+.addressicon {
+    color: #0b7e20;
+    background-color: #eaf6ec;
+}
+
+.phoneicon {
+    color: #2176ff;
+    background-color: #eaf0ff;
+}
+
+.div3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contentdiv {
+    text-align: start;
+    letter-spacing: 0.5px;
+}
+
+.contentmaintext {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contentsubtext {
+    margin-bottom: 5px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.workinghourscontainer {
+    background-color: #f5f5f5;
+    padding: 22px 18px;
+    border-radius: 20px;
+}
+
+.workinghourstext {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.workinghourssubtext {
+    margin-bottom: 6px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/*sendmessage container*/
+.contactcontainer input,
+textarea {
+    font-family: 'Inter', 'Noto Sans Tamil', 'Open Sans', sans-serif;
+    color: #111111;
+    font-size: 15px;
+}
+
+.name-phn {
+    display: flex;
+    gap: 15px;
+}
+
+.contactcontainer h4 {
+    font-weight: 550;
+    color: #1d1d1d;
+    margin-bottom: 8px;
+}
+
+.required-star {
+    color: red;
+    font-weight: bold;
+}
+
+.contactcontainer input,
+.contactcontainer textarea {
+    padding: 10px 14px;
+    width: 100%;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    background-color: #fff;
+    color: #111;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactcontainer textarea {
+    padding: 10px 40px 60px 14px;
+    vertical-align: top;
+    resize: vertical;
+}
+
+.contactcontainer input::placeholder,
+.contactcontainer textarea::placeholder {
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+.contactcontainer input:focus,
+.contactcontainer textarea:focus {
+    border-color: #2c7be5;
+    box-shadow: 0 0 0 3px rgba(44, 123, 229, 0.1);
+}
+
+.inputdiv {
+    margin-bottom: 18px;
+}
+
+.submitbtn {
+    width: 100%;
+    padding: 13px 18px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+    background-color: #ff7300;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 115, 0, 0.3);
+}
+
+.submitbtn:hover {
+    background-color: #e86400;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 115, 0, 0.4);
+}
+
+.submitbtn:active {
+    transform: scale(0.98);
+}
+
+.submitbtn i {
+    margin-right: 10px;
+}
+
+/*Messsage sent text*/
+.messageSent {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #d1e7dd;
+    color: #0f5132;
+    border-left: 4px solid #198754;
+    padding: 20px;
+    border-radius: 10px;
+}
+.messageSent i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*map container*/
+.mapcontainer {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    margin-top: 50px;
+    margin-left: 155px;
+    width: 80%;
+    padding: 32px;
+}
+
+.mapcontainer h3 {
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.mapcontainer i {
+    font-size: 20px;
+    margin-right: 10px;
+}
