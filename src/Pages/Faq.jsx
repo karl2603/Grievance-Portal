@@ -58,7 +58,7 @@ function FAQ() {
     <Navbar />
       <div className="FAQmaintext">
         <h1 className="faqtext">
-          <i className="fi fi-rs-interrogation"></i>
+          <i className="fi fi-rs-interrogation faqI"></i>
           <strong>Frequently Asked Questions</strong>
         </h1>
         <p className="faqsubtext">
