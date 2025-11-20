@@ -28,7 +28,7 @@ function Home() {
           </div>
           <div className='statContainer'>
             <div className='statDiv'>
-              <i class="fi fi-ts-land-layer-location"></i>
+              <i class="fi fi-rs-land-layer-location"></i>
               <h3 className='statHeader'>38</h3>
               <p className='statPara'>Districts Covered</p>
             </div>
@@ -55,26 +55,28 @@ function Home() {
           </div>
           <div className='sec3Container'>
             <div className='helpDiv'>
-              <i class="fi fi-rs-document"></i>
+              <i class="fi fi-rs-document iRed"></i>
               <h2 className='helpHeader'>Submit Grievance</h2>
               <p className='helpPara'>Report an issue with supporting documents. We'll assign it to the right department.</p>
               <button className='helpBtn getStarted' onClick={()=>{navigate("/Submit")}}>Get Started</button>
             </div>
              <div className='helpDiv'>
-              <i class="fi fi-rs-search"></i>
+              <i class="fi fi-rs-search iGreen"></i>
               <h2 className='helpHeader'>Track Your Case</h2>
               <p className='helpPara'>Enter your grievance ID to check the current status and expected resolution time.</p>
-              <button className='helpBtn getStarted' onClick={()=>{navigate("/View")}}>Track Now</button>
+              <button className='helpBtn trackNow' onClick={()=>{navigate("/View")}}>Track Now</button>
             </div>
              <div className='helpDiv'>
-              <i class="fi fi-rs-interrogation"></i>
+              <i class="fi fi-rs-interrogation iRed"></i>
               <h2 className='helpHeader'>Need Help?</h2>
               <p className='helpPara'>Browse frequently asked questions or contact our support team for assistance.</p>
-              <button className='helpBtn getStarted' onClick={()=>{navigate("/Faq")}}>View FAQ</button>
+              <button className='helpBtn viewFaq' onClick={()=>{navigate("/Faq")}}>View FAQ</button>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
-}export default Home
+}
+export default Home
