@@ -3,28 +3,39 @@ import "../Style/Navbar.css";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <img
-          src="Images/removelogofooter.png"
-          alt="TN Government Logo"
-          width="65px"
-          height="150px"
-        />
-      </div>
+    <header className="navbar-container">
+      <nav className="navbar">
+        {/* Left Section: Logo & Title */}
+        <div className="navbar-brand">
+          <img 
+            // Using a placeholder for the TN Emblem. 
+            // Replace this URL with your local file path (e.g., /assets/tn-logo.png)
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/TamilNadu_Logo.svg/1200px-TamilNadu_Logo.svg.png" 
+            alt="Government of Tamil Nadu Emblem" 
+            className="navbar-logo" 
+          />
+          <div className="brand-text">
+            <h1 className="brand-title">Grievance Redressal Portal</h1>
+            <p className="brand-subtitle">Government of Tamil Nadu</p>
+          </div>
+        </div>
 
-      <h2 className="headertext" style={{ marginLeft: "-440px" }}>
-        தமிழ்நாடு அரசு
-      </h2>
+        {/* Middle Section: Navigation Links */}
+        <ul className="navbar-links">
+          <li><a href="/Home">Home</a></li>
+          <li><a href="/Submit">Submit Grievance</a></li>
+          <li><a href="/View">View Status</a></li>
+          <li><a href="/Faq">FAQ</a></li>
+          <li><a href="/Contact">Contact Us</a></li>
+        </ul>
 
-      <div className="nav-links">
-        <a href="/Home">Home</a>
-        <a href="/Submit">Submit Grievance</a>
-        <a href="/View">View Status</a>
-        <a href="/Faq">FAQs</a>
-        <a href="/Contact" className="contact-btn">Contact Us</a>
-      </div>
-    </nav>
+        {/* Right Section: Language Toggles */}
+        <div className="navbar-lang">
+          <button className="lang-btn active">English</button>
+          <button className="lang-btn">தமிழ்</button>
+        </div>
+      </nav>
+    </header>
   );
 }
 

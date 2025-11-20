@@ -6,12 +6,13 @@ import Submit from './Pages/Submit.jsx'
 import View from './Pages/View.jsx'
 import Faq from './Pages/Faq.jsx'
 import Contact from './Pages/Contact.jsx'
+import NotFound from './Pages/NotFound.jsx'
 import './App.css'
 
 function App() {
-    return (
+
+  return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/Home' element={<Home />}/>
@@ -19,8 +20,8 @@ function App() {
         <Route path='/View' element={<View />}/>
         <Route path='/Faq' element={<Faq />}/>
         <Route path='/Contact' element={<Contact />}/>
+        <Route path='*' element={<NotFound />}/>
       </Routes>
-      <Footer />
     </BrowserRouter>
   )
 }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import "../Style/Faq.css";
 
 function FAQ() {
@@ -53,6 +55,7 @@ function FAQ() {
 
   return (
     <>
+    <Navbar />
       <div className="FAQmaintext">
         <h1 className="faqtext">
           <i className="fi fi-rs-interrogation"></i>
