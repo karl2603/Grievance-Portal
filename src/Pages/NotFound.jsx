@@ -47,7 +47,7 @@ export default function NotFound() {
       <h1 className="error-code">404</h1>
       <h2 className="title">Page not found</h2>
       <p className="description">
-        The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        The page you are looking for is temporarily unavailable.
       </p>
     </div>
   );
