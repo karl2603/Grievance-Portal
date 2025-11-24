@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { useNavigate } from "react-router-dom";
 import "../Style/Faq.css";
 
 function FAQ() {
+  const navigate = useNavigate()
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -87,6 +89,12 @@ function FAQ() {
           </div>
         ))}
       </div>
+      <div className="redirectContact">
+        <h3 className="qsH">Still have questions?</h3>
+        <p className="qsP">Our support team is here to help you with any queries</p>
+        <button className="contactRedirect" onClick={()=>{navigate("/Contact")}}>Contact Support</button>
+      </div>
+      <Footer />
     </>
   );
 }
