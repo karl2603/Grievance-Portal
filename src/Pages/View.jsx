@@ -7,25 +7,45 @@ function View() {
   return (
     <>
     <Navbar />
-      <div className="ViewText">
-  <h1 className="maintext"><strong>View Status</strong></h1>
-  <p className="subtext">
-    Enter your Reference ID to check the current status of your grievance.
-  </p>
-</div>
+      
+      <div className="grievance-page-container">
+        <div className="grievance-content-wrapper">
+          
+          {/* Header Section */}
+          <div className="grievance-header">
+            <h1 className="title">Track Grievance</h1>
+            <p className="subtitle">Enter your grievance ID to check the current status</p>
+          </div>
 
-<div className="ViewContainer">
-  <input
-    type="text"
-    className="viewinput"
-    placeholder="Enter Reference ID (e.g., TN09-CZ06393416)"
-  />
+          {/* Main Card */}
+          <div className="grievance-card">
+            <form className="grievance-form" onSubmit={(e) => e.preventDefault()}>
+              
+              <label htmlFor="grievanceId" className="input-label">
+                Grievance ID
+              </label>
 
-  <button className="ViewBtn">
-    <i className="fi fi-rr-search"></i>
-    <span>Search</span>
-  </button>
-</div>  
+              <div className="input-group">
+                <input
+                  type="text"
+                  id="grievanceId"
+                  name="grievanceId"
+                  className="grievance-input"
+                  placeholder="Enter your Grievance ID (e.g., TN123456)"
+                  autoComplete="off"
+                />
+                
+                <button type="submit">Search</button>
+              </div>
+
+              <p className="helper-text">
+                The grievance ID was sent to your email and mobile after submission
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </>
   )
 }
