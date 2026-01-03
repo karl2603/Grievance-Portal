@@ -8,8 +8,14 @@ import Faq from './Pages/Faq.jsx'
 import Contact from './Pages/Contact.jsx'
 import NotFound from './Pages/NotFound.jsx'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
+  const [grievances, setGrievances] = useState(
+    [
+      
+    ]
+  )
 
   return (
     <BrowserRouter>

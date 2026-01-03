@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import "../Style/Submit.css";
 
 function Submit() {
+  const [grievance, setGrievance] = useState({
+    name : "",
+    phoneNumber : "",
+    emailAddress : "",
+    district : "",
+    category : "",
+    desc : "",
+    status : "Received",
+    officer : "",
+    department : ""
+  })
+  function handleChange(e){
+    const {name, value} = e.target
+    setGrievance((prev)=>({
+      ...prev,
+      [name] : value
+    }))
+  }
+  function handleSubmit(e){
+    e.preventDefault();
+    console.log(grievance);
+  }
   return (
     <>
       <Navbar />
@@ -15,7 +37,6 @@ function Submit() {
           addressed with care and transparency.
         </p>
       </div>
-
       <div className="container" id="formContainer">
         <h2>📄 Grievance Details</h2>
         <p className="note">
@@ -23,7 +44,7 @@ function Submit() {
           <span className="required-star">*</span>
         </p>
 
-        <form id="grievanceForm">
+        <form id="grievanceForm" onSubmit={handleSubmit}>
           <div className="row">
             <div className="namephninput">
               <label htmlFor="name">
@@ -34,6 +55,9 @@ function Submit() {
                 placeholder="Enter your name"
                 type="text"
                 id="name"
+                name="name"
+                value={grievance.name}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -48,6 +72,9 @@ function Submit() {
                 type="text"
                 id="phone"
                 pattern="\d{10}"
+                name="phoneNumber"
+                value={grievance.phoneNumber}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -60,6 +87,9 @@ function Submit() {
             type="email"
             id="email"
             placeholder="Enter your email address"
+            name="emailAddress"
+            value={grievance.emailAddress}
+            onChange={handleChange}
             required
           />
 
@@ -68,7 +98,7 @@ function Submit() {
               <label htmlFor="district">
                 Select District <span className="required-star">*</span>
               </label>
-              <select id="district" required>
+              <select id="district" name="district" value={grievance.district} onChange={handleChange} required>
                 <option value="">Select your district</option>
                 <option value="Ariyalur">Ariyalur</option>
                 <option value="Chengalpattu">Chengalpattu</option>
@@ -115,7 +145,7 @@ function Submit() {
                 Grievance Category <span className="required-star">*</span>
               </label>
 
-              <select id="category" required>
+              <select id="category" name="category" value={grievance.category} onChange={handleChange} required>
                 <option value="">Select grievance category</option>
 
                 <option value="Roads and Transportation">Roads and Transportation</option>
@@ -190,6 +220,9 @@ function Submit() {
           <textarea
             id="description"
             placeholder="Describe your grievance in detail..."
+            name="desc"
+            value={grievance.desc}
+            onChange={handleChange}
             required
           />
 
